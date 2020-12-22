@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  dockerkubernetesexample:
+    image: ${DOCKER_REGISTRY-}dockerkubernetesexample
+    build:
+      context: .
+      dockerfile: DockerKubernetesExample/Dockerfile

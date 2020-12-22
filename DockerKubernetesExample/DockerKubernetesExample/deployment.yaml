@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerkubernetesexample
+spec:
+  selector:
+    matchLabels:
+      app: dockerkubernetesexample
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: dockerkubernetesexample
+    spec:
+      containers:
+      - name: dockerkubernetesexample
+        image: moynuldocker/dockerkubernetesexample:latest
+        ports:
+        - containerPort: 80
