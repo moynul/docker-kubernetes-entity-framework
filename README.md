@@ -11,10 +11,10 @@ docker-compose -f "docker-compose.yml" up -d
 docker images
 
 docker ps
-
+docker save -o E:\dockerImage\bgaccountcreation.tar bgaccountcreation:latest
 
 ----- Push image to docker local registry-----
-
+docker load -i bgaccountcreation.tar
 docker tag dockerkubernetesexample:latest moynuldocker/dockerkubernetesexample:latest
 
 docker push moynuldocker/dockerkubernetesexample:latest
